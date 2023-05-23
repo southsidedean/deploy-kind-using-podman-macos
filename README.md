@@ -12,6 +12,8 @@ Modern Macs, even the Apple Silicon varients, are a great platform to work with 
 
 ## References
 
+[GitHub: Deploying KIND Using Podman on MacOS](https://github.com/southsidedean/deploy-kind-using-podman-macos)
+
 [KIND: Kubernetes in Docker](https://kind.sigs.k8s.io)
 
 [KIND: Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
