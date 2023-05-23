@@ -1,9 +1,6 @@
 # Deploying KIND Using Podman on MacOS
 
-***Tom Dean - 1/23/23***
-
-###### tags: `MacOS`, `Docker`, `Podman`, `KIND`, `Apple`, `Silicon`, `Intel`, `Homebrew`, `Kubernetes`, `K8s`
-
+[Tom Dean: LinkedIn](https://www.linkedin.com/in/tomdeanjr/)
 ## Introduction
 
 Sometimes you just want a lightweight Kubernetes cluster.  You might want to brush up on your Kubernetes skills in preparation for a CNCF exam, prototype and test some code, or one of a million other possible scenarios.  Standing up a Kubernetes cluster, even with automation and the Cloud, can be slow, cumbersome and overkill for many of your K8s needs.
@@ -15,8 +12,11 @@ Modern Macs, even the Apple Silicon varients, are a great platform to work with 
 ## References
 
 [KIND: Kubernetes in Docker](https://kind.sigs.k8s.io)
+
 [KIND: Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
+
 [Rootless KIND](https://kind.sigs.k8s.io/docs/user/rootless/)
+
 [Homebrew](https://brew.sh)
 
 ## Prerequisites
@@ -64,15 +64,15 @@ Writing manifest to image destination
 Storing signatures
 !... Hello Podman World ...!
 
-         .--"--.           
-       / -     - \         
-      / (O)   (O) \        
-   ~~~| -=(,Y,)=- |         
-    .---. /`  \   |~~      
- ~/  o  o \~~~~.----. ~~   
-  | =(X)= |~  / (O (O) \   
-   ~~~~~~~  ~| =(Y_)=-  |   
-  ~~~~    ~~~|   U      |~~ 
+         .--"--.
+       / -     - \
+      / (O)   (O) \
+   ~~~| -=(,Y,)=- |
+    .---. /`  \   |~~
+ ~/  o  o \~~~~.----. ~~
+  | =(X)= |~  / (O (O) \
+   ~~~~~~~  ~| =(Y_)=-  |
+  ~~~~    ~~~|   U      |~~
 
 Project:   https://github.com/containers/podman
 Website:   https://podman.io
@@ -288,6 +288,17 @@ We can see our KIND container (`docker.io/kindest/node`):
 ```bash
 CONTAINER ID  IMAGE                                                                                           COMMAND               CREATED         STATUS                     PORTS                      NAMES
 274b6a12a161  docker.io/kindest/node@sha256:f52781bc0d7a19fb6c405c2af83abfeb311f130707a0e219175677e366cc45d1                        33 seconds ago  Up 32 seconds ago          127.0.0.1:61198->6443/tcp  kind-control-plane
+```
+
+Using 'kubectl', we can take a look at our KIND cluster:
+```bash
+kubectl get nodes
+```
+
+We see our single-node cluster:
+```bash
+NAME                 STATUS   ROLES           AGE   VERSION
+kind-control-plane   Ready    control-plane   26s   v1.25.3
 ```
 
 Let's try deleting the cluster:
