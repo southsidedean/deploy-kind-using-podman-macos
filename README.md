@@ -55,7 +55,7 @@ podman run hello-world
 ```
 
 We should see something like the following:
-```bash title=Output
+```bash
 Resolved "hello-world" as an alias (/etc/containers/registries.conf.d/000-shortnames.conf)
 Trying to pull quay.io/podman/hello:latest...
 Getting image source signatures
@@ -170,11 +170,6 @@ Now that our prerequisites are satisfied and we have working Podman and `go` ins
 Install KIND:
 ```bash
 go install sigs.k8s.io/kind@v0.17.0
-```
-
-We should see output like the following:
-```bash
-GET SOME OUTPUT
 ```
 
 If we check the `~/go/bin` directory, we should see `kind`:
