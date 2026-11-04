@@ -1,3 +1,5 @@
+> **Archived November 2026.** This tutorial dates from 2023 and is no longer maintained. It leaves out the `podman machine init` and `podman machine start` steps that Podman's docs list for macOS, and its KIND and Kubernetes versions are out of date. For current instructions, see the [KIND quick start](https://kind.sigs.k8s.io/docs/user/quick-start/) and [Podman's installation docs](https://podman.io/docs/installation).
+
 # Deploying KIND Using Podman on MacOS
 
 ### Tom Dean: [LinkedIn](https://www.linkedin.com/in/tomdeanjr/)
